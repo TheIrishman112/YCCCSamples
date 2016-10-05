@@ -1,6 +1,6 @@
-package org.yccc.samples.arrays;
+package org.yccc.cis170.arrays;
 
-import org.yccc.samples.dtos.User;
+import org.yccc.cis170.dtos.User;
 
 public class ArraySamples 
 {

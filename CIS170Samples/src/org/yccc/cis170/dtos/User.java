@@ -1,4 +1,4 @@
-package org.yccc.samples.dtos;
+package org.yccc.cis170.dtos;
 
 public class User 
 {

@@ -1,4 +1,4 @@
-package org.yccc.samples.logic;
+package org.yccc.cis170.logic;
 
 import static org.junit.Assert.*;
 
