@@ -28,12 +28,31 @@ public class ArraySamples
 	
 	public User[] loadUsers()
 	{
-		User user1 = new User("Mike", "Bourgeois", "mike.bourgeois@gmail.com", null);
-		User user2 = new User("Frank", "Figgle", "frank.figgle@gmail.com", null);
+		User user1 = new User("Jill", "Stein", "jstein.com", "Is email green?");
+		User user2 = new User("Gary", "Johnson", "gjohnson@gmail.com", null);
+		User user3 = new User("Donald", "Trump", "dtrump@gmail.com", "Great Again!");
+		User user4 = new User("Hillary", "Clinton", "hclinton@gmail.com", "What emails?");
 		
-		User[] users = new User[] {user1, user2};
+		User[] users = new User[] {user1, user2, user3, user4,
+				new User("Bernie", "Sanders", "bsanders@gmail.com", "Other Peoples money")};
 		
 		return users;	
+	}
+	
+	public void loopOverArray()
+	{
+		User[] localUsers = loadUsers();
+		
+		for(int i = 0; i < localUsers.length; i++)
+		{
+			System.out.println(localUsers[i]);
+		}
+	}
+	
+	public static void main(String[] argz)
+	{
+		ArraySamples as = new ArraySamples();
+		as.loopOverArray();
 	}
 
 }
