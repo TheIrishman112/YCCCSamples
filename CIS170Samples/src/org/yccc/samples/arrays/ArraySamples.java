@@ -1,5 +1,7 @@
 package org.yccc.samples.arrays;
 
+import org.yccc.samples.dtos.User;
+
 public class ArraySamples 
 {
 	private void createArray()
@@ -22,6 +24,16 @@ public class ArraySamples
 		{
 			yourFriends[i] = "No one";
 		}
+	}
+	
+	public User[] loadUsers()
+	{
+		User user1 = new User("Mike", "Bourgeois", "mike.bourgeois@gmail.com", null);
+		User user2 = new User("Frank", "Figgle", "frank.figgle@gmail.com", null);
+		
+		User[] users = new User[] {user1, user2};
+		
+		return users;	
 	}
 
 }
