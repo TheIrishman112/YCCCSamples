@@ -2,7 +2,7 @@ package org.yccc.cis170.io;
 
 import java.util.Scanner;
 
-public class IOLesson 
+public class IOSampleRunner 
 {
 	// Program entry point.
 	public static void main(String[] args)
