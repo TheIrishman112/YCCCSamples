@@ -8,7 +8,18 @@ public class ArraySamplesTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		ArrayAssignment aa = new ArrayAssignment();
+		
+		String[] withDupes = new String[]{"dog", "cat", "dog", "giraffe"};
+		String[] dupeFree = aa.removeDupes(withDupes);
+		
+		for(int i = 0; i < dupeFree.length; i++)
+		{
+			if("dog".equals(dupeFree[i]))
+			{
+				fail("Still has dupes!");
+			}
+		}
 	}
 
 }

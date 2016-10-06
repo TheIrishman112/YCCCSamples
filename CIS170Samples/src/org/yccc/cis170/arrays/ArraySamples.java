@@ -13,7 +13,7 @@ public class ArraySamples
 		int[] myLotterNumbers = {7, 13, 26, 44, 68, 3};
 		
 		// Create an array that will be populated later.
-		String[] yourFriends = new String[8];
+		String[] yourFriends = new String[256];
 		Long[] phoneNumbers = new Long[16];
 		
 		//Loop over an array
@@ -36,7 +36,8 @@ public class ArraySamples
 		User user4 = new User("Hillary", "Clinton", "hclinton@gmail.com", "What emails?");
 		
 		User[] users = new User[] {user1, user2, user3, user4,
-				new User("Bernie", "Sanders", "bsanders@gmail.com", "Other Peoples money")};
+				new User("Bernie", "Sanders", "bsanders@gmail.com", "Other Peoples money"),
+				new User("Jack", "Black", "jblack@gmail.com", "rock and roll")};
 		
 		return users;	
 	}

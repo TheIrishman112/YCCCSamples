@@ -9,7 +9,8 @@ import org.junit.Test;
 
 
 
-public class LogicAssignmentTest {
+public class LogicAssignmentTest 
+{
 	private static List <String> testWords = new ArrayList<String>();
 	static{
 		testWords.add("giraffe");
@@ -17,7 +18,7 @@ public class LogicAssignmentTest {
 		testWords.add("flash");
 		testWords.add("garage");
 	}
-	private String guesses = "aeso";
+	private String guesses = "Aeso";
 	@Test
 	public void testMaskLength() {
 		
@@ -25,7 +26,7 @@ public class LogicAssignmentTest {
 		for(String testWord : testWords)
 		{
 			String mask = la.generateMask(testWord);
-			
+			System.out.println(mask);
 			assertEquals(testWord.length(), mask.length());
 			assertNotEquals(testWord, mask);
 		}
@@ -38,9 +39,16 @@ public class LogicAssignmentTest {
 		for(String testWord : testWords)
 		{
 			String mask = la.generateMask(testWord, guesses);
+			System.out.println(mask);
 			
-			assertTrue(mask.contains("a"));
+			assertTrue(mask.contains("A") || mask.contains("a"));
+			assertTrue(mask.contains("*"));
 		}
+	}
+	
+	@Test
+	public void testNew(){
+		
 	}
 
 }
