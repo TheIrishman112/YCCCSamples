@@ -4,6 +4,8 @@ import org.yccc.cis170.dtos.User;
 
 public class ArraySamples 
 {
+	
+	// Creating Arrays.
 	private void createArray()
 	{
 		// Create an array  with the values already populated.
@@ -23,7 +25,7 @@ public class ArraySamples
 		for(int i = 0; i < yourFriends.length; i++)
 		{
 			yourFriends[i] = "No one";
-		}
+		} 
 	}
 	
 	public User[] loadUsers()
