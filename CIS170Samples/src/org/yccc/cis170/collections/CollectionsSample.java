@@ -13,7 +13,7 @@ public class CollectionsSample {
 	private List<User> users = new ArrayList<User>();
 	
 	// custom comparator to sort by first name
-	private static Comparator<User> SORT_BY_FIRSTNAME = new Comparator<User>(){
+	private Comparator<User> sortFirstName = new Comparator<User>(){
 
 		@Override
 		public int compare(User arg0, User arg1) {
@@ -41,6 +41,7 @@ public class CollectionsSample {
 	{
 		for(User user : users)
 		{
+			user.getEmail();
 			System.out.println(user);
 		}
 	}
@@ -48,7 +49,7 @@ public class CollectionsSample {
 	private void sortList()
 	{
 		System.out.println("Sort by first name");
-		Collections.sort(users, SORT_BY_FIRSTNAME);
+		Collections.sort(users, sortFirstName);
 		loopOverList();
 	}
 	
@@ -57,13 +58,8 @@ public class CollectionsSample {
 	{
 		CollectionsSample cs = new CollectionsSample();
 		cs.loadUsers();
-		cs.loopOverList();
-		
-		
+		cs.loopOverList();	
 		cs.sortList();
-		
-		
-		
 	}
 
 }
