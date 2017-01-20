@@ -1,4 +1,4 @@
-package org.yccc.cis174.agency;
+package org.yccc.cis174.insurance.dto;
 
 import java.util.Date;
 

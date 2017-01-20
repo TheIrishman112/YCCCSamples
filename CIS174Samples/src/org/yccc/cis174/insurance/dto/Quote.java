@@ -1,4 +1,4 @@
-package org.yccc.cis174.agency;
+package org.yccc.cis174.insurance.dto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,5 +35,4 @@ public class Quote {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
 }
