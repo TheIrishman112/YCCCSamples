@@ -8,9 +8,6 @@ public class InheritanceLesson {
 		
 		if(c instanceof Vehicle){
 			System.out.println("It's a vehicle");
-		}
-		
-		
+		}		
 	}
-
 }

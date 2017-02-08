@@ -1,0 +1,8 @@
+Student			| 1.25	| 2.1	|	2.8
+Paul Archer		| x	| x | x |	
+Robert Brann
+Jyothi Gaddam
+Dylan Jeffery
+Hans Meier
+Kyle O'Brien
+Desirai Richard
