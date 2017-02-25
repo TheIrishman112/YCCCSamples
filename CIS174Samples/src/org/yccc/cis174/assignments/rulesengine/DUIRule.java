@@ -1,4 +1,4 @@
-package org.yccc.cis174.insurance.rules;
+package org.yccc.cis174.assignments.rulesengine;
 
 import org.yccc.cis174.dto.Quote;
 
