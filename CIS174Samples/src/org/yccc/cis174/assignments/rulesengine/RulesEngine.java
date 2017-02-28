@@ -6,17 +6,22 @@ import java.util.List;
 import org.yccc.cis174.dto.Quote;
 
 public class RulesEngine {
-	private RulesEngine rulesEngine;
+	private static RulesEngine rulesEngine;
 	private static List<Rule> rules = new ArrayList<Rule>();
 	static {
 		rules.add(new DUIRule());
+		rules.add(new GoodStudentDiscount());
+		rules.add(new HighValueCollector());
 	}
+	
+	// Prevents instantiation, forces people through getInstance.
+	private RulesEngine(){}
 	
 	/** 
 	 * Singleton pattern helps assure that you have only a single instance of an object in memory.
 	 * @return
 	 */
-	public RulesEngine getInstance()
+	public static RulesEngine getInstance()
 	{
 		if(rulesEngine == null)
 		{
@@ -25,10 +30,12 @@ public class RulesEngine {
 		return rulesEngine;
 	}
 	
-	private void processRules(Quote quote)
+	public void processRules(Quote quote)
 	{
 		for(Rule rule: rules)
 		{
+			System.out.println("Executing " + rule.getClass().getSimpleName());
+		
 			rule.config(quote);
 			rule.execute();
 			rule.getMessage();
