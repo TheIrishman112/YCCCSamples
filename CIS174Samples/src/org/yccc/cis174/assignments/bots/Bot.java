@@ -26,9 +26,7 @@ public class Bot extends JPanel
 		g.setColor(Color.WHITE);
 		g.fillRect(6, 6, this.getWidth() - 12, this.getHeight() - 12);
 		g.setColor(Color.BLACK);
-		g.fillRect(oneX, oneY, 6, 6);
-		
-		
+		g.fillRect(oneX, oneY, 6, 6);	
 	}
 
 	public void moveIt() {
