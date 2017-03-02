@@ -1,6 +1,6 @@
-package org.yccc.cis174.insurance.rules;
+package org.yccc.cis174.assignments.rulesengine;
 
-import org.yccc.cis174.insurance.dto.Quote;
+import org.yccc.cis174.dto.Quote;
 
 public class DUIRule implements Rule {
 

@@ -1,6 +1,6 @@
-package org.yccc.cis174.assignments;
+package org.yccc.cis174.assignments.stocks;
 
-import org.yccc.cis174.assignments.Stock;
+import org.yccc.cis174.assignments.stocks.Stock;
 
 public class StockController {
 	

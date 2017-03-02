@@ -1,4 +1,4 @@
-package org.yccc.cis174.insurance.dto;
+package org.yccc.cis174.dto;
 
 import java.util.ArrayList;
 import java.util.List;

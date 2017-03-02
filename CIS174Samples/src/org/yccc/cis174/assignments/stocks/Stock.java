@@ -1,4 +1,4 @@
-package org.yccc.cis174.assignments;
+package org.yccc.cis174.assignments.stocks;
 
 public class Stock 
 {
