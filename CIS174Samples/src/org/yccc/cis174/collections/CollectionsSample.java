@@ -1,4 +1,4 @@
-package org.yccc.cis170.collections;
+package org.yccc.cis174.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import org.yccc.cis170.dtos.User;
+import org.yccc.cis174.dto.User;
+
+
 
 public class CollectionsSample {
 	
@@ -20,6 +22,7 @@ public class CollectionsSample {
 			return arg0.getFirstName().compareTo(arg1.getFirstName());
 		}	
 	};
+
 	
 	private static Comparator<User> SORTBY_LASTNAME = new Comparator<User>(){
 
@@ -32,9 +35,9 @@ public class CollectionsSample {
 	
 	private void loadUsers()
 	{
-		users.add(new User("Paul", "Ryan", "paul@ryan.com", "leaveMeAlone"));
-		users.add(new User("Donald", "Trump", "trump@trump.com", "GreatAgain"));
-		users.add(new User("Hillary", "Clinton", "hillary@clinton.com", "deleteMe"));
+		users.add(new User("Paul", "Ryan"));
+		users.add(new User("Donald", "Trump"));
+		users.add(new User("Hillary", "Clinton"));
 	}
 	
 	private void loopOverList()
