@@ -1,4 +1,4 @@
-package org.yccc.cis170.recursion;
+package org.yccc.cis174.recusion;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,9 +19,9 @@ public class Recursion {
 	public static void main(String[] args) throws IOException
 	{
 		Recursion r = new Recursion();
-		//r.directoyRecursion("C:/Users");
+		r.directoyRecursion("C:/Users");
 		
-		r.recursiveDataProcessing("Mike Bourgeois mike.bourgeois@gmail.com");
+		//r.recursiveDataProcessing("Mike Bourgeois mike.bourgeois@gmail.com");
 		
 	}
 	
