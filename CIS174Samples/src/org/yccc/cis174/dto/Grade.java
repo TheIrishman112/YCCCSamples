@@ -16,6 +16,4 @@ public class Grade {
 	public void setPointsAchieved(int pointsAchieved) {
 		this.pointsAchieved = pointsAchieved;
 	}
-	
-
 }
