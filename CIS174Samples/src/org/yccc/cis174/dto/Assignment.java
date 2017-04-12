@@ -5,7 +5,10 @@ public class Assignment {
 	private String name;
 	private String description;
 	private int pointsPossible;
+	private int pointsRecieved;
 	
+	
+
 	public Assignment(int id, String name, String description, int pointsPossible)
 	{
 		this.id = id;
@@ -37,6 +40,22 @@ public class Assignment {
 	}
 	public void setPointsPossible(int pointsPossible) {
 		this.pointsPossible = pointsPossible;
+	}
+	
+	public int getPointsRecieved() {
+		return pointsRecieved;
+	}
+
+	public void setPointsRecieved(int pointsRecieved) {
+		this.pointsRecieved = pointsRecieved;
+	}
+	
+	public String toString(){
+		return new StringBuilder("Assignment [ ")
+			.append("Name: ").append(name)
+			.append(" | Description: ").append(description)
+			.append(" | Points Received: ").append(pointsRecieved)	
+			.append("]").toString();
 	}
 
 }

@@ -14,14 +14,18 @@ import java.util.List;
  */
 public class Recursion {
 	
-	List<String> tokens = new ArrayList<String>();
+	
 	
 	public static void main(String[] args) throws IOException
 	{
+		String document = "<node><child>child A</child><child>child B</child><child>child C</child></node>";
+		
+		
 		Recursion r = new Recursion();
 		r.directoyRecursion("C:/Users");
-		
 		//r.recursiveDataProcessing("Mike Bourgeois mike.bourgeois@gmail.com");
+		
+		//r.xmlParse(document);
 		
 	}
 	
@@ -56,6 +60,7 @@ public class Recursion {
 			index = dataToProcess.length();
 		}
 			
+		List<String> tokens = new ArrayList<String>();
 		String token = dataToProcess.substring(0, index);
 		tokens.add(token);
 		System.out.println(tokens);
@@ -64,5 +69,20 @@ public class Recursion {
 		{
 			recursiveDataProcessing(dataToProcess.substring(index + 1, dataToProcess.length()));
 		}
+	}
+	
+	
+	private Node xmlParse(String xml)
+	{
+		int closeNode = xml.indexOf(">");
+		String name = xml.substring(1, closeNode);
+		
+		int closeElement = xml.lastIndexOf(name);
+		String value = xml.substring(name.length() + 2, closeElement - 2);
+		
+		Node n = new Node(name, value);
+		System.out.println(n);
+		
+		return null;		
 	}
 }
