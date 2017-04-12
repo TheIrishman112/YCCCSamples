@@ -1,6 +1,7 @@
 package org.yccc.cis174.collections;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ public class GradesSample {
 	
 	private List<User> students = new ArrayList<User>();
 	private List<Assignment> assignments = new ArrayList<Assignment>();
+	private Map <User, Collection<Assignment>>gradeBook = new HashMap<User, Collection<Assignment>>();
 	
 	private void loadStudents()
 	{
@@ -28,15 +30,30 @@ public class GradesSample {
 		assignments.add(new Assignment(4, "Classroom Management System", "Manage a classroom", 100));
 	}
 	
-	private void loadGrades()
+	private void loadGradeBook()
 	{
-		Map m = new HashMap();
 		for(User user : students){
+			// create a map where the User is the key, and the value is a copy of all the assignments we have defined.
+			gradeBook.put(user, new ArrayList<Assignment>(assignments));
+		}
+	}
+	
+	private void printGradeBook()
+	{
+		for(User user : students){
+			List<Assignment> grades = (List<Assignment>) gradeBook.get(user);
+			System.out.println( user + " " + grades);
 		}
 	}
 	
 	
 	
-	
+	public static void main(String[] args){
+		GradesSample gs = new GradesSample();
+		gs.loadAssignments();
+		gs.loadStudents();
+		gs.loadGradeBook();
+		gs.printGradeBook();	
+	}	
 
 }
