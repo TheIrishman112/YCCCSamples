@@ -36,10 +36,15 @@ public class IOSamples {
 	public void writeFile() {
 		BufferedWriter out = null;
 		try {
-			FileWriter fstream = new FileWriter("out.txt");
+			FileWriter fstream = new FileWriter("out.txt", true);
 			out = new BufferedWriter(fstream);
 			out.write("Hello Java, ");
 			out.write("how have you been?");
+			for(int i = 0; i < 10; i++)
+			{
+				out.write(String.valueOf(i));
+				out.write(",");
+			}
 			out.close();
 		} catch (Exception e) {
 			e.printStackTrace();
